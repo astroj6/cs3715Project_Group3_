@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+	window.onload = init; 
+	 function init() {
+     var buttonE = document.getElementById("editEventsBut");
+     buttonE.onclick = handleButtonClick;
+	 var buttonD = document.getElementById("DeleteEventsBut");
+	 buttonD.onclick = handleDButtonClick;
+	 var buttonS = document.getElementById("editjohn");
+	 buttonS.onclick = handleSButtonClick;
+	 var buttonG = document.getElementById("editGren");
+	 buttonG.onclick = handleGButtonClick;
+	 var buttonA = document.getElementById("editArt");
+	 buttonA.onclick = handleAButtonClick;
+	 }
+	 
+	 function handleSButtonClick() {
+	    var textInputS = document.getElementById("Artemis");
+		var changeS = textInputS.value;
+		var pS = document.getElementById("pStjohn");
+		pS.innerHTML=changeS;
+		}
+		function handleGButtonClick() {
+	    var textInputG = document.getElementById("Artemis");
+		var changeG = textInputG.value;
+		var pG = document.getElementById("pGren");
+		pG.innerHTML=changeG;
+		}
+		function handleAButtonClick() {
+	    var textInputA = document.getElementById("Artemis");
+		var changeA = textInputA.value;
+		var pA = document.getElementById("pArt");
+		pA.innerHTML=changeA;
+		}
+	 function handleButtonClick() {  
+     var textInput = document.getElementById("comments");    
+	 var change = textInput.value;	
+     var li = document.createElement("li")
+     li.innerHTML = change;
+	 var ul = document.getElementById("eventList"); 
+	 ul.appendChild(li); 
+	 
+	 }
+	 function handleDButtonClick() {
+	 var ul = document.getElementById("eventList");
+	 ul.innerHTML=" ";
+	 }
+	 
+
+     </script>
+	<title>Homepage</title>
+	<link type="text/css" href="uni_laptop.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a href="uni.html" title="Our University image on focus"><img src="stjohnst.jpg"></a>
+                <h2>Welcome to our University</h2>
+		<li id="ad">Address</li>
+		<li id="ph">Phone</li>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="university.html">MAIN</a></li>
+			<li><a href="course1.html">ST. JOHN'S CAMPUS</a></li>
+			<li><a href="course2.html">GRENFELL CAMPUS</a></li>
+			<li><a href="course3.html">ARTEMIS CAMPUS</a></li>
+			<li><a href="studentPage.html">STUDENT</a></li>
+			<li><a href="PreviousCourse.html">PREVIOUS COURSES</a></li>
+			<li><a href="directions1.html">DIRECTION</a></li>
+
+		</ul>
+	</nav>
+	<div id="campus">
+		<h1>Our Campuses</h1>
+			<div id="top1" class="one">
+
+				<a href="course1.html" title="St.John's Campus"><img src="cam1.jpg"></a>
+				<a href="course1.html"><p><strong>Campus St. John's</strong></p></a>
+				<p id=pStjohn>our largest campus in st john's features multiple facilities designed to enhance your univerity experience as you choose one of our enriching academic programs</p>
+			</div>
+			<div class="two">
+				<a href="course2.html" title="Grenfell Campus"><img src="grenfellthumb.jpg"></a>
+				<a href="course2.html"><p><strong>Campus Grenfell</strong></p></a>
+				<p id=pGren>Grenfell Campus located in the tranquil west of the island , is a liberal arts and science campus specializing in environmental and fine arts programs</p>
+				
+			</div>
+			<div class="one">
+				<a href="course3.html"title="Artemis Campus"><img src="artemisthumb.jpg"></a>
+				<a href="course3.html"><p><strong>Campus Artemis</strong></p></a>
+				<p id=pArt>Our campus in greece offers students an opportunity to study abroad and benefit from a unique learning experience</p>
+			</div>
+	</div>
+	<div id="events">
+	    <form>	
+		<textarea name="comments" id="comments" rows="10" cols="30" placeholder="input new event"></textarea>
+
+	    <input type="button" id="editEventsBut" value="Add Event"><br><br>
+		<input type="button" id="DeleteEventsBut" value="Delete All Events">
+		</form>
+		<h2>Events</h2>
+		<ul id=eventList>
+			<li>Monday</li>
+			<ul>
+				<li>Guest lecture by Einstein</li>
+				<li>Basketball game</li>
+			</ul>
+			<li>Tuesday</li>
+			<ul>
+				<li>Something</li>
+			</ul>
+		</ul>
+	</div>
+	<footer>
+	<div class="textARtemis">
+			 <form>	
+		       <textarea name="edit Art" id="Artemis" placeholder="edit description"></textarea>
+			   <input type="button" id="editArt" value="edit Artemis Campus"> <br><br>
+			   <input type="button" id="editGren" value="edit Grenfell Campus"> <br><br>
+			   <input type="button" id="editjohn" value="edit St john's Campus"><br><br>
+			   </form>
+			   </div>
+		<p>University info/copyright</p>
+	</footer>
+</body>
+</html>

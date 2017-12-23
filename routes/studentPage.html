@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link type="text/css" href="catalogue1.css" rel="stylesheet">
+	<script>
+	window.onload = init;
+	function init() {
+var buttonD = document.getElementById("dropCourse");
+     buttonD.onclick = handleButtonDClick;
+	var buttonE = document.getElementById("RegCourse");
+     buttonE.onclick = handleButtonClick;
+	localStorage.getItem("RegNames");
+	 localStorage.getItem("RegNumbers");
+	 localStorage.getItem("RegRs");
+	 var RegstoredNames = JSON.parse(localStorage.getItem("RegNames"));
+	var RegstoredNumbers = JSON.parse(localStorage.getItem("RegNumbers"));
+	var RegstoredRs = JSON.parse(localStorage.getItem("RegRs"));
+	var table = document.getElementById("myTable");
+	var t = 0 ;
+	for(var i =0 ; i<RegstoredNames.length ; i++){
+	    table.rows[i+1].cells[0].innerHTML = RegstoredNames[t];
+		table.rows[i+1].cells[1].innerHTML = RegstoredNumbers[t];
+		table.rows[i+1].cells[2].innerHTML = RegstoredRs[t];
+		t=t+1;
+		}
+		t=0;
+		i=0;
+		} 
+		function handleButtonClick() {
+		var textInput1 = document.getElementById("regName");
+		var textInput2 = document.getElementById("regNumber");
+		var textInput3 = document.getElementById("regR");
+		var table = document.getElementById("myTable");
+		var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+	cell1.innerHTML = textInput1.value;
+	
+	 var cell2 = row.insertCell(1);
+	cell2.innerHTML = textInput2.value;
+	
+	 var cell3 = row.insertCell(2);
+	cell3.innerHTML = textInput3.value;
+		
+		}
+
+function handleButtonDClick() {
+var removed = document.getElementById("select").value;
+	 var removedInt = parseInt(removed);
+	 var localAr = parseInt(removedInt);
+	 
+	 document.getElementById("myTable").deleteRow(removedInt);
+
+}
+
+		</script>
+	<title>St. John's Campus student view registered courses</title>
+</head>
+<body>
+    <header>
+		<h2>St. John's Campus student view courses</h2>
+		</header>
+		<nav>
+		<ul>
+			<li><a href="university.html">MAIN</a></li>
+			<li><a href="course1.html">ST. JOHN'S CAMPUS</a></li>
+			<li><a href="course2.html">GRENFELL CAMPUS</a></li>
+			<li><a href="course3.html">ARTEMIS CAMPUS</a></li>
+			<li><a href="studentPage.html">STUDENT</a></li>
+			<li><a href="PreviousCourse.html">PREVIOUS COURSES</a></li>
+			<li><a href="login.html">LOG IN</a></li>
+			<li><a href="directions1.html">DIRECTION</a></li>
+		</ul>
+	</nav>
+	<p>Please Log in to view the student page</p>
+		</body>
+</html>

@@ -1,0 +1,195 @@
+ <!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+	window.onload = init; 
+	 var RcourseNames = [];
+	 var RcourseNumbers = [];
+	 var RcourseRs = [];
+	 var RegcourseNames = [];
+	 var RegcourseNumbers = [];
+	 var RegcourseRs = [];
+	 function init() {
+     var buttonA = document.getElementById("addCourse");
+     buttonA.onclick = handleButtonClick;
+	 var buttonD = document.getElementById("deleteCourse");
+     buttonD.onclick = handleButtonDClick;
+	 var buttonR = document.getElementById("RegCourse");
+	 buttonR.onclick = handleButtonRClick;
+	 
+	 }
+	 function handleButtonRClick() {  
+	 var textInput1 = document.getElementById("regName");
+	 var textInput2 = document.getElementById("regNumber");
+	 var textInput3 = document.getElementById("regR");
+	 RegcourseNames.push(document.getElementById("regName").value);
+	 RegcourseNumbers.push(document.getElementById("regNumber").value);
+	 RegcourseRs.push(document.getElementById("regR").value);
+	 localStorage.setItem("RegNames", JSON.stringify(RegcourseNames));
+	 localStorage.setItem("RegNumbers", JSON.stringify(RegcourseNumbers));
+	 localStorage.setItem("RegRs", JSON.stringify(RegcourseRs));
+	 localStorage.getItem("RegNames");
+	 localStorage.getItem("RegNumbers");
+	 localStorage.getItem("RegRs");
+	 alert("Button was clicked!");
+	 }
+	 function handleButtonClick() {  
+     var textInput = document.getElementById("courseN");    
+	 var change = textInput.value;	
+     var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+	cell1.innerHTML = change;
+	var textInput1 = document.getElementById("courseNum");    
+	 var change1 = textInput1.value;
+	 var cell2 = row.insertCell(1);
+	cell2.innerHTML = change1;
+	var textInput2 = document.getElementById("courseNum");    
+	 var change2 = textInput2.value;
+	 var cell3 = row.insertCell(2);
+	cell3.innerHTML = change2;
+	var x = document.getElementById("select");
+	var option = document.createElement("option");
+	option.text = parseInt(document.getElementById("select").length) + 1;
+	x.add(option);
+	 
+	 alert("Button was clicked!");
+	 }
+	 
+	 function handleButtonDClick() {
+	 var removed = document.getElementById("select").value;
+	 var removedInt = parseInt(removed);
+	 var localAr = parseInt(removedInt);
+	 
+	 RcourseNames.push( document.getElementById("myTable").rows[localAr].cells[0].innerHTML);
+	 RcourseNumbers.push( document.getElementById("myTable").rows[localAr].cells[1].innerHTML);
+	 RcourseRs.push( document.getElementById("myTable").rows[localAr].cells[2].innerHTML);
+   
+	 localStorage.setItem("RNames", JSON.stringify(RcourseNames));
+	 localStorage.setItem("RNumbers", JSON.stringify(RcourseNumbers));
+	 localStorage.setItem("Rs", JSON.stringify(RcourseRs));
+	 localStorage.getItem("RNames");
+	 localStorage.getItem("RNumbers");
+	 localStorage.getItem("Rs");
+	  
+	 document.getElementById("myTable").deleteRow(removedInt);
+	 }
+    </script>
+	<title>Course Catalogue</title>
+	<link type="text/css" href="catalogue1.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h2>ARTEMIS's Campus</h2>
+		<a href="" title="Artemis's Campus"><img src="artemisthumb.jpg"></a>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="university.html">MAIN</a></li>
+			<li><a href="course1.html">ST. JOHN'S CAMPUS</a></li>
+			<li><a href="course2.html">GRENFELL CAMPUS</a></li>
+			<li><a href="course3.html">ARTEMIS CAMPUS</a></li>
+			<li><a href="studentPage.html">STUDENT</a></li>
+			<li><a href="PreviousCourse.html">PREVIOUS COURSES</a></li>
+			<li><a href="directions1.html">DIRECTION</a></li>
+
+		</ul>
+	</nav>
+	<div id="main">
+	<h1>Course Catalogue</h1>
+	<p>
+	<form>
+	<input type="text" name="courseN" id="courseN" placeholder="Course Name">
+	<input type="text" name="courseNum" id="courseNum" placeholder="Course Number">
+	<input type="text" name="courseR" id="courseR" placeholder="Room">
+	<input type="button" id="addCourse" value="ADD COURSE TO CATALOGUE">
+	</form>
+	
+	<form>
+	<p> delete course in table Row :</p>
+	<select name="table rows" id="select">   
+	<option value="1">1</option>  
+	<option value="2">2</option>  
+	<option value="3">3</option>   
+	<option value="4">4</option>
+	<option value="5">5</option>	
+	</select>
+	<input type="button" id="deleteCourse" value="Delete course">
+	</form>
+
+	
+	
+	
+	
+	<table id=myTable>
+		<tr>
+			<th>Course Name</th>
+			<th>Course Number</th>
+			<th>Room</th>
+		</tr>
+		<tr>
+			<td class="first">Web programming</td>
+			<td class="first">COMP 9999</td>
+			<td class="first">EN-5723</td>
+		</tr>
+		<tr>
+			<td class="second">Software development</td>
+			<td class="second">COMP 7777</td>
+			<td class="second">EN-4754</td>
+		</tr>
+		<tr>
+			<td class="third">Database Management</td>
+			<td class="third">COMP 3720</td>
+			<td class="third">EN-2711</td>
+		</tr>
+		<tr>
+			<td class="fourth">Computer Organization</td>
+			<td class="fourth">COMP 3724</td>
+			<td class="fourth">EN-2744</td>
+		</tr>
+		<tr>
+			<td class="first">Web programming</td>
+			<td class="first">COMP 9999</td>
+			<td class="first">EN-5723</td>
+		</tr>
+		<tr>
+			<td class="second">Software development</td>
+			<td class="second">COMP 7777</td>
+			<td class="second">EN-4754</td>
+		</tr>
+		<tr>
+			<td class="third">Database Management</td>
+			<td class="third">COMP 3720</td>
+			<td class="third">EN-2711</td>
+		</tr>
+		<tr>
+			<td class="fourth">Computer Organization</td>
+			<td class="fourth">COMP 3724</td>
+			<td class="fourth">EN-2744</td>
+		</tr>
+	</table>
+	</p>
+	</div>
+	<h1>Register for a course</h1>
+	<form>
+		<div id="lside">
+		<p>
+			<input type="text" name="user" id= "regName" placeholder="Course Name">
+			<input type="text" name="userr" id= "regNumber" placeholder="Course Number">
+			<input type="text" name="userrrr" id= "regR" placeholder="Room">
+		</p>
+		</div>
+		<div id="rside">
+		<p>
+		<br>			
+		</p>
+		</div>
+		<div id="footer">
+		<p>
+			<input type="button" id="RegCourse" value="Register">
+		</p>
+		</div>
+	</form>
+</body>
+</html>

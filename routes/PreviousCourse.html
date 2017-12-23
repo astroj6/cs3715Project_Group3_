@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link type="text/css" href="catalogue1.css" rel="stylesheet">
+	<script>
+	window.onload = init;
+	function init() {
+	localStorage.getItem("RNames");
+	 localStorage.getItem("RNumbers");
+	 localStorage.getItem("Rs");
+	var storedNames = JSON.parse(localStorage.getItem("RNames"));
+	var storedNumbers = JSON.parse(localStorage.getItem("RNumbers"));
+	var storedRs = JSON.parse(localStorage.getItem("Rs"));
+	var table = document.getElementById("myTable");
+	var t = 0 ;
+	for(var i =0 ;i < storedNames.length ; i++){
+	    table.rows[i+1].cells[0].innerHTML = storedNames[t];
+		table.rows[i+1].cells[1].innerHTML = storedNumbers[t];
+		table.rows[i+1].cells[2].innerHTML = storedRs[t];
+		t= t+1;
+		}
+		t=0;
+		i=0;
+		}
+		
+	</script>
+	<title>Previous Courses</title>
+</head>
+<body>
+    <header>
+		<h2>St. John's Campus</h2>
+		</header>
+		<nav>
+		<ul>
+			<li><a href="university.html">MAIN</a></li>
+			<li><a href="course1.html">ST. JOHN'S CAMPUS</a></li>
+			<li><a href="course2.html">GRENFELL CAMPUS</a></li>
+			<li><a href="course3.html">ARTEMIS CAMPUS</a></li>
+			<li><a href="studentPage.html">STUDENT</a></li>
+			<li><a href="PreviousCourse.html">PREVIOUS COURSES</a></li>
+			<li><a href="directions1.html">DIRECTION</a></li>
+			
+		</ul>
+	</nav>
+		<table id=myTable>
+		<tr>
+			<th>Course Name</th>
+			<th>Course Number</th>
+			<th>Room</th>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>	
+		</tr>
+		</table>
+		</body>
+</html>

@@ -1,0 +1,129 @@
+		@media all and (min-width: 2000px) {
+    			.header { text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1; }
+			.footer { -webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+			.lside { text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1; }
+    			.rside { -webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+		}		
+
+		body {
+			font-family: Verdana, Geneva, Arial, sans-serif;
+			font-size: small;
+			padding-left: 1%;
+			padding-right: 1%;
+			border: thin solid black;
+		}
+		header {
+			background-color: #ffeab7;
+			margin: 1%;
+			height: 200px;
+			border: thin solid black;
+		}
+		h1 {
+			font-family: "Emblema One", sans-serif;
+			font-size: 220%;
+			margin-left: 2%;
+			padding-left: 1%;
+		}
+		nav {
+			background-color: #efe5d0;
+			margin: 1%;
+			border: thin solid black;
+		}
+		nav ul {
+			margin: 0px;
+			list-style-type: none;
+			padding: 1%;
+		}
+		nav ul li {
+			display: inline;
+			padding: 1%;
+		}
+		nav ul li a:link, nav ul li a:visited {
+			color: black;
+			border-bottom: none;
+			font-weight: bold;
+		}
+		nav ul li.selected {
+			background-color: #c8b99c;
+		}
+		h2 {
+			font-size: 250%;
+			font-weight: bold;
+			position: absolute;
+			top: 5%;
+			left: 20%;
+			padding: 2%;
+		}
+		table {
+			margin-left: 5%;
+			margin-right: 5%;
+			border: thin solid black;
+			border-collapse: collapse;
+			width:90%;
+		}
+		td, th , tr {
+			border: thin solid black;
+			padding: 20px;
+		}
+		th {
+			background-color: #c495f0;
+		}
+		tr{
+			background-color: #afcecf;
+		}
+			
+		.first {
+			background-color: #bfffe9;
+		}
+		.second {
+			background-color: #ccccfb;
+		}
+		.third {
+			background-color: #afcecf;
+		}
+		.fourth {
+			background-color: #e6dfd7;
+		}
+		#main {
+			border: thin solid black;
+			margin: 1%;
+			padding: 1%;
+		}
+		img {
+			position: absolute;
+			top: 5%;
+			left: 5%;
+			border: thin  solid black;
+		}
+		form {
+			margin: 1%;
+			padding: 1%;
+			margin-left: 2%;
+			margin-right: 2%;
+			width: 94%;
+			border: thin solid black;
+			background-color: #ccccfb;
+		}
+		#lside {
+			margin: 1%;
+			padding: 1%;
+			width: 50%;
+			height: 2%;
+			float: left;
+		}
+		#rside {
+			margin: 1%;
+			padding: 1%;
+			width: 50%;
+			height: 5%;
+			float: right;
+		}
+		#footer{
+			position: bottom;
+			margin: 1%;
+			padding: 1%;
+			width: 100%;
+			height: 5%;
+		}
+		
+
